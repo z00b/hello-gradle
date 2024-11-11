@@ -5,3 +5,11 @@ plugins {
 
 rootProject.name = "hello-gradle"
 include("app")
+
+buildCache {
+    local {
+        directory = File(rootDir, "build-cache")
+	isEnabled = true
+	isPush = true
+    }
+}
